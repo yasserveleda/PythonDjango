@@ -1,0 +1,15 @@
+
+<br>
+<br>
+<center><h1>Meu blog</h1></center>
+<br>
+{% if latest_poll_list %}
+    <ul>
+    {% for poll in latest_poll_list %}
+        <li>{{ poll.question }}</li>
+    <br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

@@ -1,0 +1,38 @@
+<title>BLOG DO DJANGO</title>
+<font face="tahoma">
+
+<br>
+<br>
+
+<center><img src="http://glitterbug.in/static/uploads/post_pic/2012-06/b0b908478d55c0b97a734ca6115ff9e5.png" border="0" width="600" height="250"></center>
+
+
+
+<MARQUEE BEHAVIOR=SCROLL DIRECTION="lefth" BGCOLOR="white"WIDTH=100%><h1>Meu primeiro BLOG em Django & Python </h1> </MARQUEE>
+<br></br>
+
+
+<br>
+{% if latest_choice_list %}
+    <ul>
+    {% for poll in latest_poll_list %}
+        <li>{{ poll.question }}
+            <br>
+        {% for choice in latest_choice_list %}    
+
+            {% if choice.poll.question == poll.question %}
+                {{choice.choice}}<br>
+        
+            {% endif %}
+        
+        {% endfor %}
+        
+    <br>    
+    <br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Entrou no else.</p>
+{% endif %}
+
+</font>
