@@ -1,6 +1,6 @@
 from math import sqrt, pow
 
-print "\n\n----- Calcular Bhaskara -----\n\n"
+print "\n\n--- Calcular Bhaskara ---\n\n"
 
 a=None
 b=None
