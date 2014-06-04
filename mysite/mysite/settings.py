@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls',
-    'blog'
+    'blog',
+    'bhaskara'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,9 +80,9 @@ USE_TZ = True
 
 TEMPLATE_DIRS = (
 
-    "C:\\Users\\Yasser\\mysite\\polls\\templates"
-    "C:\\Users\\Yasser\\mysite\\blog\\templates"
-
+    #"C:\\Users\\Yasser\\mysite\\polls\\templates",
+    #"C:\\Users\\Yasser\\mysite\\blog\\templates",
+    "C:\\Users\\Yasser\\mysite\\bhaskara\\templates",
 
 )
 

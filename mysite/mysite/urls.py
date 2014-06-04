@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, include, url
-
+from bhaskara import views
 from django.contrib import admin
 admin.autodiscover()
+
 
 urlpatterns = patterns('',
     # Examples:
@@ -9,7 +10,10 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^polls/$', 'polls.views.index'),
-    url(r'^blog/$', 'blog.views.index')
+    #url(r'^polls/$', views.index)
+    #url(r'^blog/$', views.index)
+    url(r'^bhaskara/', views.index),
+    url(r'^bhaskara/ll/$', views.resultado),
 )
+
 

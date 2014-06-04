@@ -1,15 +1,37 @@
 
-<br>
-<br>
-<center><h1>Meu blog</h1></center>
-<br>
-{% if latest_poll_list %}
-    <ul>
-    {% for poll in latest_poll_list %}
-        <li>{{ poll.question }}</li>
-    <br>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+
+#!/usr/bin/env python
+
+import cgi
+import cgitb; cgitb.enable()  # for troubleshooting
+
+print "Content-type: text/html"
+print
+
+print """
+<html>
+
+<head><title>Sample CGI Script</title></head>
+
+<body>
+
+  <h3> Sample CGI Script </h3>
+"""
+
+form = cgi.FieldStorage()
+message = form.getvalue("message", "(no message)")
+
+print """
+
+  <p>Previous message: %s</p>
+
+  <p>form
+
+  <form method="post" action="index.cgi">
+    <p>message: <input type="text" name="message"/></p>
+  </form>
+
+</body>
+
+</html>
+""" % message
